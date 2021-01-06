@@ -23,3 +23,19 @@ class FaceController:
                         if self.CurrentStatus.status != "VOICE":
                             break
                         sd.sleep(1)
+            elif self.CurrentStatus.status == "SLEEP":
+                if self.last_status != "SLEEP":
+                    print("SLEEP")
+                    self.last_status = "SLEEP"
+            elif self.CurrentStatus.status == "ANGRY":
+                if self.last_status != "ANGRY":
+                    print("ANGRY")
+                    self.last_status = "ANGRY"
+            elif self.CurrentStatus.status == "SAD":
+                if self.last_status != "SAD":
+                    print("SAD")
+                    self.last_status = "SAD"
+            elif self.CurrentStatus.status == "CONFUSED":
+                if self.last_status != "CONFUSED":
+                    print("CONFUSED")
+                    self.last_status = "CONFUSED"
